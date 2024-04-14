@@ -2,4 +2,4 @@
 layout: ../layouts/announcementsLayout.astro
 ---
 
-test announcement
+test announcement edit
