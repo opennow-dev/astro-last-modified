@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "astro": "^4.6.1",
+    "dayjs": "^1.11.10",
     "firebase-tools": "^13.7.2",
     "typescript": "^5.4.5"
   }

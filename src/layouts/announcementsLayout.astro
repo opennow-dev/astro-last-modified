@@ -1,0 +1,25 @@
+---
+import Layout from "./Layout.astro";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+const lastModified = dayjs(Astro.props.frontmatter.lastModified)
+  .tz("America/Toronto")
+  .format("YYYY MMM DD");
+---
+
+<Layout>
+  <Fragment slot="main">
+    <div>
+      <h1>Announcements</h1>
+      <div>
+        <slot />
+        <div>Last Updated: {lastModified}</div>
+      </div>
+    </div>
+  </Fragment>
+</Layout>
